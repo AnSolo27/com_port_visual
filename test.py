@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 plt.style.use('fivethirtyeight')
 
-x_val = [1, 2, 4, 2]
-ch1_y_val = [3, 4, 2, 2]
-ch2_y_val = []
-plt.plot(x_val, ch1_y_val, label='Channel = 1')
+x_val = [1, 2, 2, 1, 1]
+ch1_y_val = [1, 1, 2, 2, 1]
+ch1_z_val = [1, 1, 2, 2, 1]
+plt.plot(x_val, ch1_y_val, ch1_z_val)
 plt.show()
