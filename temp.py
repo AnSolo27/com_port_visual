@@ -16,10 +16,7 @@ for y in range(4):
         BotRightX = 4 * x + 3
         BotRightY = 15 - 4 * y - 3
         print("---")
-        print(topLeftX)
-        print(topLeftY)
-        print(BotRightX)
-        print(BotRightY)
+        print(topLeftX, topLeftY, BotRightX, BotRightY)
         print("---")
         x_val = [topLeftX, topLeftX, BotRightX, BotRightX, topLeftX]
         y_val = [BotRightY, topLeftY, topLeftY, BotRightY, BotRightY]
