@@ -27,13 +27,22 @@ def animate(i):
             i+=1
     print(result)
     print(A)
-    #plt.cla()
-    #A = A.transpose()
+    for stroka in range(4):
+        A[stroka][0], A[stroka][2] = A[stroka][2], A[stroka][0]
+        A[stroka][1], A[stroka][3] = A[stroka][3], A[stroka][1]
+    A[0][2], A[3][2] = A[3][2], A[0][2]
+    A[0][3], A[3][3] = A[3][3], A[0][3]
+    A[0][2], A[2][2] = A[2][2], A[0][2]
+    A[0][3], A[2][3] = A[2][3], A[0][3]
+    A[0][2], A[1][2] = A[1][2], A[0][2]
+    A[0][3], A[1][3] = A[1][3], A[0][3]
+    print("---")
+    print(A)
     obj.set_data(A)
 
 ani = FuncAnimation(plt.gcf(), animate, interval=50)
 plt.plot()
-obj = plt.imshow(A, origin='upper', interpolation=interp, extent=[0, 4, 0, 4], vmax=2300, vmin=300)
+obj = plt.imshow(A, origin='upper', interpolation=interp, extent=[0, 4, 0, 4], vmax=2500, vmin=300)
 plt.title(interp.capitalize())
 plt.grid(True)
 plt.show()
